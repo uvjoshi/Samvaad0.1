@@ -108,3 +108,194 @@ h1 {
 }
 
 /******************* OUR TEAM PAGE ******************/
+
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Team Header (Title and Paragraph) */
+.team-header h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.team-header p {
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  color: #dcdcdc;
+}
+
+/* Team Members Container (Flexbox for layout) */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between the cards */
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+/* Individual Member Card */
+.member-card {
+  background-color: #f8f8f8; /* Light background for the cards */
+  color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: calc(50% - 20px); /* Roughly half width minus gap */
+  max-width: 450px; /* Max width for individual cards */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Photo Placeholder / Image Container */
+.member-photo {
+  width: 120px;
+  height: 120px;
+  background-color: #e0e0e0; /* Grey background as a fallback/border effect */
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex; /* Using flex to center if content is smaller */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Crucial to crop image edges to the circle */
+  border: 2px solid #ccc; /* Subtle border for the photo circle */
+}
+
+/* Styling for the image inside the photo container */
+.member-photo img {
+  width: 100%; /* Make image fill the container width */
+  height: 100%; /* Make image fill the container height */
+  object-fit: cover; /* This is KEY: it covers the area, cropping if necessary, without distortion */
+  border-radius: 50%; /* Ensure the image itself is also circular */
+}
+
+/* Member Name */
+.member-name {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Member Title (Founder/Co-Founder) */
+.member-title {
+  font-size: 1.1em;
+  color: #888;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Member Description Paragraph */
+.member-description {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.7;
+  text-align: left; /* Align description text to left */
+}
+/******************* Contact US page ******************/
+.contact-page-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* This is key for horizontally centering the container itself */
+  text-align: center; /* This centers inline-level content like text, paragraphs, and block elements with auto margins */
+}
+
+/* Common Section Titles and Descriptions */
+.section-title {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #ffffff;
+  /* text-align: center;  Already handled by .contact-page-container */
+}
+
+.section-description {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto 50px auto; /* auto margins center a block element with a defined width */
+  color: #dcdcdc;
+  /* text-align: center;  Already handled by .contact-page-container */
+}
+
+/* Contact Cards Container (Flexbox for layout) */
+.contact-cards-container {
+  display: flex;
+  justify-content: center; /* This centers the flex items horizontally */
+  gap: 30px; /* Space between the cards */
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  margin-bottom: 80px; /* Space between contact section and download section */
+  /* Remove width and margin auto here as justify-content handles centering within its parent */
+  /* If you wanted the whole container to be narrower than 100% and centered, you'd add: */
+  /* max-width: 1100px; */
+  /* margin: 0 auto; */
+}
+
+/* Individual Contact Card */
+.contact-card {
+  background-color: #dfbbda; /* Slightly lighter purple for cards */
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Align text inside cards to the left */
+  width: calc(33.33% - 20px); /* Roughly one-third width minus gap */
+  max-width: 350px; /* Max width for individual cards */
+  box-sizing: border-box; /* Include padding in width */
+  display: flex; /* Use flexbox for content inside card */
+  flex-direction: column; /* Stack content vertically */
+  flex: 4;
+  justify-content: space-between; /* Push bottom content down */
+  min-height: 150px; /* Ensure cards have a consistent height */
+}
+
+.contact-card h3 {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.contact-card p {
+  font-size: 1em;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+.contact-card .email-address,
+.contact-card .support-link,
+.contact-card .whatsapp-link,
+.contact-card .feedback-link {
+  font-weight: bold;
+  color: #ffffff; /* Make links/email stand out a bit more */
+  margin-top: auto; /* Pushes this element to the bottom if space allows */
+  display: block; /* Ensures it takes its own line */
+}
+
+/* Download App Section */
+.download-app-section {
+  padding-top: 15px; /* Add some space from the contact section */
+  /* text-align: center; Already handled by .contact-page-container */
+}
+
+.google-play-button {
+  background-color: #ffffff; /* White background for the button */
+  color: #333; /* Dark text for contrast */
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+  display: inline-block; /* Ensure button can be centered by parent text-align */
+}
+
+.google-play-button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
